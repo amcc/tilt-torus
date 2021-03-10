@@ -44,3 +44,20 @@ video {
   padding: 10px;
 }
 
+#info {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  font-size: 1rem;
+  z-index: 200;
+}
+@media only screen and (max-width: 400px) {
+  #info {
+    padding: 1.2rem;
+    font-size: 1.2rem;
+  }
+}
+#info a {
+  color: gray;
+}
