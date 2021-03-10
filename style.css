@@ -1,19 +1,12 @@
-* {
-  box-sizing: border-box;
-}
-
 html, body {
   margin: 0;
   padding: 0;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 1.5rem;
 }
-
 canvas {
   position: absolute;
   z-index: 2;
 }
-
 video {
   position: absolute;
   top: 0;
@@ -51,37 +44,3 @@ video {
   padding: 10px;
 }
 
-#info {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  padding: 0 1rem;
-  z-index: 200;
-  background-color:rgba(255,255,255,0.6);;
-  max-width: 40vw;
-}
-
-#info-inner {
-  
-}
-
-@media only screen and (min-width: 400px) {
-  body {
-    font-size: 0.8rem;
-  }
-  #info {
-    padding.2rem;
-    max-width: 50vw;
-  }
-}
-#info a {
-  color: gray;
-}
-
-#close {
-  background: transparent;
-  border: 0px solid;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 100%;
-  padding: 5px 0;
-}
