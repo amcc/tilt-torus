@@ -5,8 +5,11 @@ let iosMotion = false;
 let video;
 let vidGraphics;
 
+let motionHtml;
+let hideMotionHtml = false;
 let infoHtml;
-let hideHtml = false;
+let hideInfoHtml = false;
+
 
 if (typeof DeviceMotionEvent.requestPermission === 'function') {
   ios = true
@@ -43,7 +46,8 @@ function setup() {
   );
   // video.elt.setAttribute("playsinline", "");
 
-  infoHtml = select('.start-text');
+  motionHtml = select('.start-text');
+  infoHtml = select('#info');
 }
 
 function draw() {
@@ -68,14 +72,18 @@ function draw() {
   } else {
 
   }
-
-  if ((ios && iosMotion && !hideHtml) || (!ios && !hideHtml)) {
-    infoHtml.addClass('hidden');
-    infoHtml.removeClass('start-text');
-    hideHtml = true;
+  if ((ios && iosMotion && !hideMotionHtml) || (!ios && !hideMotionHtml)) {
+    motionHtml.addClass('hidden');
+    motionHtml.removeClass('start-text');
+    hideMotionHtml = true;
   }
 }
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+}
+
+function mousePressed(){
+  hideInfoHtml ? infoHtml.removeClass('hidden') : infoHtml.addClass('hidden');
+  hideInfoHtml = !hideInfoHtml;
 }
