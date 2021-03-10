@@ -83,7 +83,7 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-function mousePressed(){
+function mouseClicked(){
   hideInfoHtml ? infoHtml.removeClass('hidden') : infoHtml.addClass('hidden');
   hideInfoHtml = !hideInfoHtml;
 }
