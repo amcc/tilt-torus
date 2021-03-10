@@ -52,11 +52,13 @@ video {
   font-size: 1rem;
   z-index: 200;
   background: #fff;
+  width: 50vw;
 }
 @media only screen and (max-width: 400px) {
   #info {
     padding: 1.2rem;
     font-size: 1.2rem;
+    width: 30vw;
   }
 }
 #info a {
