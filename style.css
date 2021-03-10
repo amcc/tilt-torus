@@ -8,10 +8,12 @@ html, body {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 1.5rem;
 }
+
 canvas {
   position: absolute;
   z-index: 2;
 }
+
 video {
   position: absolute;
   top: 0;
@@ -55,16 +57,16 @@ video {
   left: 0;
   padding: 2rem;
   z-index: 200;
-  background-color:rgba(255,255,255,0.3);;
+  background-color:rgba(255,255,255,0.6);;
   width: 40vw;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (min-width: 400px) {
   body {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
   #info {
     padding: 1.2rem;
-    width: 30vw;
+    width: 50vw;
   }
 }
 #info a {
