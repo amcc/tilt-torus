@@ -1,7 +1,6 @@
 let motion = false;
 let ios = false;
 let iosMotion = false;
-let _text;
 
 let video;
 let vidGraphics;
@@ -31,7 +30,6 @@ if (typeof DeviceMotionEvent.requestPermission === 'function') {
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
   vidGraphics = createGraphics(width, height)
-  //blendMode(MULTIPLY)
   video = createCapture({
       audio: false,
       video: {
@@ -52,12 +50,10 @@ function draw() {
   clear();
   if (motion) {
     vidGraphics.image(video, 0, 0, width, height);
-    // filter(INVERT);
     let boxwidth = width < height ? width * 1 / 4 : height * 1 / 4;
     // ambientLight(150);
     // pointLight(255, 255, 255, 0, 0, boxwidth * 5);
 
-    // background(0);
     rotateZ(radians(rotationZ));
     rotateX(radians(rotationX));
     rotateY(-radians(rotationY));
@@ -65,22 +61,18 @@ function draw() {
     stroke(255, 150);
     noStroke();
     fill(255);
-    //normalMaterial();
-    //box(boxwidth, boxwidth, boxwidth);
-
 
     texture(vidGraphics);
     torus(boxwidth, boxwidth / 2, 300)
   } else {
-    
+
   }
 
   if ((ios && iosMotion && !hideHtml) || (!ios && !hideHtml)) {
     infoHtml.addClass('hidden');
-  infoHtml.removeClass('start-text');
+    infoHtml.removeClass('start-text');
     hideHtml = true;
   }
-  
 }
 
 function windowResized() {
