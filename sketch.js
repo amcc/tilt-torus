@@ -91,7 +91,7 @@ function hideInfo(e){
     closeButton.html('X Close');
   } else {
     infoHtml.addClass('hidden');
-    closeButton.html('- Open');
+    closeButton.html('info');
   } 
   hideInfoHtml = !hideInfoHtml;
 }
