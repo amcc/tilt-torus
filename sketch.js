@@ -48,6 +48,7 @@ function setup() {
 
 function draw() {
   clear();
+  orbitControl();
   if (motion) {
     vidGraphics.image(video, 0, 0, width, height);
     let boxwidth = width < height ? width * 1 / 4 : height * 1 / 4;
