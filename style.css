@@ -72,3 +72,11 @@ video {
 #info a {
   color: gray;
 }
+
+#close {
+  background: transparent;
+  border: 0px solid;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 100%;
+  padding: 5px 0;
+}
