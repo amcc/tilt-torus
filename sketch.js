@@ -7,6 +7,7 @@ let vidGraphics;
 
 let motionHtml;
 let hideMotionHtml = false;
+let closeButton;
 let infoHtml;
 let hideInfoHtml = false;
 
@@ -47,7 +48,8 @@ function setup() {
   // video.elt.setAttribute("playsinline", "");
 
   motionHtml = select('.start-text');
-  infoHtml = select('#info');
+  infoHtml = select('#info-inner');
+  closeButton = select('#close')
 }
 
 function draw() {
@@ -83,7 +85,13 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-function mouseClicked(){
-  hideInfoHtml ? infoHtml.removeClass('hidden') : infoHtml.addClass('hidden');
+function hideInfo(e){
+  if (hideInfoHtml) {
+    infoHtml.removeClass('hidden');
+    closeButton.html('X Close');
+  } else {
+    infoHtml.addClass('hidden');
+    closeButton.html('- Open');
+  } 
   hideInfoHtml = !hideInfoHtml;
 }
