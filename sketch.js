@@ -74,11 +74,7 @@ function draw() {
   } else {
     
   }
-  
-  if (!ios) {
-    fill(255, 0, 0);
-    circle(0, 0, 100)
-  }
+
   if ((ios && iosMotion && !hideHtml) || (!ios && !hideHtml)) {
     infoHtml.addClass('hidden');
   infoHtml.removeClass('start-text');
